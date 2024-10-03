@@ -14,8 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
+        let viewController = ScrollableCalendarViewController()
+        viewController.reactor = ScrollableCalendarViewReactor()
+        
         window.rootViewController = UINavigationController(
-            rootViewController: ScrollableCalendarViewController()
+            rootViewController: viewController
         )
         self.window = window
         window.makeKeyAndVisible()

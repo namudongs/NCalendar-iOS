@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1756C70E2CAF245500A98BC4 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1756C70D2CAF245500A98BC4 /* ReactorKit */; };
 		1756C7112CAF245E00A98BC4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1756C7102CAF245E00A98BC4 /* RxCocoa */; };
+		1756C71B2CAF2C1100A98BC4 /* MonthSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756C71A2CAF2C1100A98BC4 /* MonthSection.swift */; };
+		1756C71E2CAF2C3900A98BC4 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 1756C71D2CAF2C3900A98BC4 /* RxDataSources */; };
+		1756C7202CAF2C5200A98BC4 /* ScrollableCalendarViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756C71F2CAF2C5200A98BC4 /* ScrollableCalendarViewReactor.swift */; };
+		1756C7222CAF2FD800A98BC4 /* ScrollableCalendarViewCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756C7212CAF2FD800A98BC4 /* ScrollableCalendarViewCellReactor.swift */; };
+		1756C7272CAF383C00A98BC4 /* DayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756C7262CAF383C00A98BC4 /* DayItem.swift */; };
 		175E9CF62CADA5F600455C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E9CE62CADA5F600455C7E /* AppDelegate.swift */; };
 		175E9CF72CADA5F600455C7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E9CE72CADA5F600455C7E /* SceneDelegate.swift */; };
 		175E9CF82CADA5F600455C7E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E9CE92CADA5F600455C7E /* Date+Extension.swift */; };
@@ -22,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1756C71A2CAF2C1100A98BC4 /* MonthSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSection.swift; sourceTree = "<group>"; };
+		1756C71F2CAF2C5200A98BC4 /* ScrollableCalendarViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableCalendarViewReactor.swift; sourceTree = "<group>"; };
+		1756C7212CAF2FD800A98BC4 /* ScrollableCalendarViewCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableCalendarViewCellReactor.swift; sourceTree = "<group>"; };
+		1756C7262CAF383C00A98BC4 /* DayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayItem.swift; sourceTree = "<group>"; };
 		175E9CE62CADA5F600455C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175E9CE72CADA5F600455C7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		175E9CE92CADA5F600455C7E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -41,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1756C7112CAF245E00A98BC4 /* RxCocoa in Frameworks */,
+				1756C71E2CAF2C3900A98BC4 /* RxDataSources in Frameworks */,
 				1756C70E2CAF245500A98BC4 /* ReactorKit in Frameworks */,
 				17BA26D02CADA40500F5280D /* SnapKit in Frameworks */,
 			);
@@ -49,6 +59,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1756C7192CAF2C0000A98BC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1756C71A2CAF2C1100A98BC4 /* MonthSection.swift */,
+				1756C7262CAF383C00A98BC4 /* DayItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1756C7232CAF35DC00A98BC4 /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				1756C7242CAF360000A98BC4 /* ScrollableCalendarView */,
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
+		1756C7242CAF360000A98BC4 /* ScrollableCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				1756C7212CAF2FD800A98BC4 /* ScrollableCalendarViewCellReactor.swift */,
+				1756C71F2CAF2C5200A98BC4 /* ScrollableCalendarViewReactor.swift */,
+			);
+			path = ScrollableCalendarView;
+			sourceTree = "<group>";
+		};
+		1756C7252CAF360900A98BC4 /* ScrollableCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				175E9CF32CADA5F600455C7E /* ScrollableCalendarViewController.swift */,
+				175E9CF02CADA5F600455C7E /* ScrollableCalendarViewCell.swift */,
+			);
+			path = ScrollableCalendarView;
+			sourceTree = "<group>";
+		};
 		175E9CE82CADA5F600455C7E /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +124,7 @@
 		175E9CF42CADA5F600455C7E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				175E9CF32CADA5F600455C7E /* ScrollableCalendarViewController.swift */,
-				175E9CF02CADA5F600455C7E /* ScrollableCalendarViewCell.swift */,
+				1756C7252CAF360900A98BC4 /* ScrollableCalendarView */,
 				175E9CF12CADA5F600455C7E /* DayViewController.swift */,
 				175E9CF22CADA5F600455C7E /* GradientView.swift */,
 			);
@@ -90,6 +134,8 @@
 		175E9CF52CADA5F600455C7E /* NCalendar-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1756C7192CAF2C0000A98BC4 /* Model */,
+				1756C7232CAF35DC00A98BC4 /* Reactor */,
 				175E9CF42CADA5F600455C7E /* View */,
 				175E9CEA2CADA5F600455C7E /* Extensions */,
 				175E9CEF2CADA5F600455C7E /* Resource */,
@@ -134,6 +180,7 @@
 				17BA26CF2CADA40500F5280D /* SnapKit */,
 				1756C70D2CAF245500A98BC4 /* ReactorKit */,
 				1756C7102CAF245E00A98BC4 /* RxCocoa */,
+				1756C71D2CAF2C3900A98BC4 /* RxDataSources */,
 			);
 			productName = "NCalendar-iOS";
 			productReference = 17BA26A92CADA32D00F5280D /* NCalendar-iOS.app */;
@@ -168,6 +215,7 @@
 				17BA26CE2CADA40500F5280D /* XCRemoteSwiftPackageReference "SnapKit" */,
 				1756C70C2CAF245500A98BC4 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				1756C70F2CAF245E00A98BC4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				1756C71C2CAF2C3900A98BC4 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 17BA26AA2CADA32D00F5280D /* Products */;
@@ -202,7 +250,11 @@
 				175E9CF92CADA5F600455C7E /* ScrollableCalendarViewCell.swift in Sources */,
 				175E9CFA2CADA5F600455C7E /* DayViewController.swift in Sources */,
 				175E9CFB2CADA5F600455C7E /* GradientView.swift in Sources */,
+				1756C7272CAF383C00A98BC4 /* DayItem.swift in Sources */,
+				1756C7222CAF2FD800A98BC4 /* ScrollableCalendarViewCellReactor.swift in Sources */,
 				175E9CFC2CADA5F600455C7E /* ScrollableCalendarViewController.swift in Sources */,
+				1756C71B2CAF2C1100A98BC4 /* MonthSection.swift in Sources */,
+				1756C7202CAF2C5200A98BC4 /* ScrollableCalendarViewReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +497,14 @@
 				minimumVersion = 6.7.1;
 			};
 		};
+		1756C71C2CAF2C3900A98BC4 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 		17BA26CE2CADA40500F5280D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -465,6 +525,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1756C70F2CAF245E00A98BC4 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		1756C71D2CAF2C3900A98BC4 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1756C71C2CAF2C3900A98BC4 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 		17BA26CF2CADA40500F5280D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1756C70E2CAF245500A98BC4 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1756C70D2CAF245500A98BC4 /* ReactorKit */; };
+		1756C7112CAF245E00A98BC4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1756C7102CAF245E00A98BC4 /* RxCocoa */; };
 		175E9CF62CADA5F600455C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E9CE62CADA5F600455C7E /* AppDelegate.swift */; };
 		175E9CF72CADA5F600455C7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E9CE72CADA5F600455C7E /* SceneDelegate.swift */; };
 		175E9CF82CADA5F600455C7E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E9CE92CADA5F600455C7E /* Date+Extension.swift */; };
@@ -38,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1756C7112CAF245E00A98BC4 /* RxCocoa in Frameworks */,
+				1756C70E2CAF245500A98BC4 /* ReactorKit in Frameworks */,
 				17BA26D02CADA40500F5280D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +132,8 @@
 			name = "NCalendar-iOS";
 			packageProductDependencies = (
 				17BA26CF2CADA40500F5280D /* SnapKit */,
+				1756C70D2CAF245500A98BC4 /* ReactorKit */,
+				1756C7102CAF245E00A98BC4 /* RxCocoa */,
 			);
 			productName = "NCalendar-iOS";
 			productReference = 17BA26A92CADA32D00F5280D /* NCalendar-iOS.app */;
@@ -160,6 +166,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				17BA26CE2CADA40500F5280D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1756C70C2CAF245500A98BC4 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				1756C70F2CAF245E00A98BC4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 17BA26AA2CADA32D00F5280D /* Products */;
@@ -421,6 +429,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1756C70C2CAF245500A98BC4 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		1756C70F2CAF245E00A98BC4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 		17BA26CE2CADA40500F5280D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -432,6 +456,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1756C70D2CAF245500A98BC4 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1756C70C2CAF245500A98BC4 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		1756C7102CAF245E00A98BC4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1756C70F2CAF245E00A98BC4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
 		17BA26CF2CADA40500F5280D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 17BA26CE2CADA40500F5280D /* XCRemoteSwiftPackageReference "SnapKit" */;
